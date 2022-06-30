@@ -1,0 +1,12 @@
+{
+  "name": "nodefood",
+  "version": "1.0.0",
+  "description": "application to calulate the cost of a shopping trip to Aldi based on prices at 30-06-2022. This will include the ability to create a new food with the price, update the price or name of the food and calculate the amount that the shopping will cost. ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Gareth Robinson",
+  "license": "ISC"
+}
