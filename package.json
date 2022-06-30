@@ -8,5 +8,8 @@
     "start": "node server.js"
   },
   "author": "Gareth Robinson",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^6.4.1"
+  }
 }
