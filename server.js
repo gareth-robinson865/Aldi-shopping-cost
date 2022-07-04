@@ -5,3 +5,7 @@ const mongoose = require('mongoose');
 
 //creating an instance of the server
 const app = express();
+
+//setting the view engine to ejs for the views
+app.set('view engine', 'ejs');
+
