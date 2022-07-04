@@ -9,3 +9,5 @@ const app = express();
 //setting the view engine to ejs for the views
 app.set('view engine', 'ejs');
 
+//make a public folder so that i can use style sheets and images
+app.use(express.static('public'));
