@@ -11,3 +11,6 @@ app.set('view engine', 'ejs');
 
 //make a public folder so that i can use style sheets and images
 app.use(express.static('public'));
+
+//allow the use of form data and to access the data sent in the request body. the extended part is to stop the depreciation error 
+app.use(express.urlencoded({ extended: true }));
