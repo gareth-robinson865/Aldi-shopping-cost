@@ -1,6 +1,6 @@
 //instances of required modules created
 const express = require('express');
-const morgan = require('morgan');
+const morgan = require('morgan');//middleware to log HTTP requests and errors in a better way
 const mongoose = require('mongoose');
 
 //creating an instance of the server
@@ -12,5 +12,7 @@ app.set('view engine', 'ejs');
 //make a public folder so that i can use style sheets and images
 app.use(express.static('public'));
 
-//allow the use of form data and to access the data sent in the request body. the extended part is to stop the depreciation error 
+//parses the information sent in a request URL into an object so we can use that information on the request object
 app.use(express.urlencoded({ extended: true }));
+
+app.use(morgan('dev'));//set to take in and log the URL, declare a status and give the response time in millisecond
