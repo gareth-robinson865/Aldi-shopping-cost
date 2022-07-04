@@ -1,3 +1,4 @@
+//setting up the server
 //instances of required modules created
 const express = require('express');
 const morgan = require('morgan');//middleware to log HTTP requests and errors in a better way
@@ -9,6 +10,7 @@ const app = express();
 //setting the view engine to ejs for the views
 app.set('view engine', 'ejs');
 
+//middleware
 //make a public folder so that i can use style sheets and images
 app.use(express.static('public'));
 
