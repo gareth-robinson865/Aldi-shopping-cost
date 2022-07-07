@@ -40,3 +40,7 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
     res.render('about', { title: 'about'})
 })
+
+app.get('/create', (req, res) => {
+    res.render('create', { title: 'create food' })
+})
