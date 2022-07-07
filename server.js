@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 const app = express();
 
 //connect to mongoDB
-const dbURI = 'mongodb+srv://new-user:Test1234@nodestuff.ykrvs.mongodb.net/?retryWrites=true&w=majority';
+const dbURI = 'mongodb+srv://new-user:Test1234@nodestuff.ykrvs.mongodb.net/FoodStuff?retryWrites=true&w=majority';
 mongoose.connect(dbURI)
     .then((result) => app.listen('3000'))//only listen for requests once connection to the db has been made
     .catch((err) => console.log(err));
