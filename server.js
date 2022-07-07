@@ -25,3 +25,8 @@ app.use((req, res, next) => {
     res.locals.path = req.path;
     next();
 });
+
+//Routes
+app.get('/', (req, res) => {
+    
+})
