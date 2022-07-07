@@ -36,3 +36,7 @@ app.use((req, res, next) => {
 app.get('/', (req, res) => {
     res.render('index', { title: 'home'})
 })
+
+app.get('/about', (req, res) => {
+    res.render('about', { title: 'about'})
+})
