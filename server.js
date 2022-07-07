@@ -7,6 +7,12 @@ const mongoose = require('mongoose');
 //creating an instance of the server
 const app = express();
 
+//connect to mongoDB
+const dbURI = 'mongodb+srv://new-user:Test1234@nodestuff.ykrvs.mongodb.net/?retryWrites=true&w=majority';
+mongoose.connect(dbURI)
+    .then((result) => app.listen('3000'))//only listen for requests once connection to the db has been made
+    .catch((err) => console.log(err));
+
 //setting the view engine to ejs for the views
 app.set('view engine', 'ejs');
 
@@ -28,5 +34,5 @@ app.use((req, res, next) => {
 
 //Routes
 app.get('/', (req, res) => {
-    
+    res.render('index', { title: 'home'})
 })
