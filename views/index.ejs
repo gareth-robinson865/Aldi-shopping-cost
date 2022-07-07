@@ -8,9 +8,16 @@
     
     <div class="list-content">
         <h2>All food</h2>
-        <% if(food.length > 0) { %>
-            
-        }
+        <% if(foods.length > 0) { %>
+            <% foods.foreach(food => { %>
+                <a class="single" href="foods/<%= food._id %>">
+                    <h3 class="title"><%= food.name %></h3>
+                    <p class="price"><%= food.price %></p>
+                </a>
+           <% }); %>
+        <% } else { %>
+            <p>No foods have been added</p>
+            <% } %>
     </div>
 </body>
 </html>
