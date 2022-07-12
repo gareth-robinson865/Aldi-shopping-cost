@@ -2,6 +2,7 @@
 //instances of required modules created
 const express = require('express');
 const morgan = require('morgan');//middleware to log HTTP requests and errors in a better way
+require('dotenv').config(); //tells the server to load anything in a file called dotenv into an environment variable
 const mongoose = require('mongoose');
 
 //creating an instance of the server
