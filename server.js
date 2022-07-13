@@ -9,7 +9,7 @@ const mongoose = require('mongoose');
 const app = express();
 
 //connect to mongoDB
-const dbURI = process.env.dbURI
+const dbURI = process.env.DBURI
     .next();
 mongoose.connect(dbURI)
     .then((result) => app.listen('3000'))//only listen for requests once connection to the db has been made
@@ -37,6 +37,7 @@ app.use((req, res, next) => {
 //Routes
 app.get('/', (req, res) => {
     res.render('index', { title: 'home'})
+    console.log(dbURI);
 })
 
 app.get('/about', (req, res) => {
