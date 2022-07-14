@@ -4,6 +4,7 @@ const express = require('express');
 const morgan = require('morgan');//middleware to log HTTP requests and errors in a better way
 require('dotenv').config(); //tells the server to load anything in a file called dotenv into an environment variable
 const mongoose = require('mongoose');
+const Food = require('../nodeFood/models/food');
 
 //creating an instance of the server
 const app = express();
@@ -35,7 +36,13 @@ app.use((req, res, next) => {
 
 //Routes
 app.get('/', (req, res) => {
-    res.render('index', { title: 'home'})
+    Food.find().sort({ createdAt: -1 })
+        .then((result) => {
+            res.render('index', { title: 'home', food: result })
+        })
+        .catch((err) => {
+            console.log(err)
+        })
 })
 
 app.get('/about', (req, res) => {
