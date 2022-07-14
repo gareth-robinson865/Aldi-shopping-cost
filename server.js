@@ -38,7 +38,7 @@ app.use((req, res, next) => {
 app.get('/', (req, res) => {
     Food.find().sort({ createdAt: -1 })
         .then((result) => {
-            res.render('index', { title: 'home', food: result })
+            res.render('index', { title: 'home', foods: result })
         })
         .catch((err) => {
             console.log(err)
