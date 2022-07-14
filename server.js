@@ -53,6 +53,17 @@ app.get('/create', (req, res) => {
     res.render('create', { title: 'create food' })
 })
 
+app.post('/', (req, res) => {
+    const food = new Food(req.body)
+    food.save()
+        .then((result) => {
+            res.redirect('/')
+        })
+        .catch((err) => {
+            console.log(err)
+        })
+})
+
 app.use((req, res) => {
     res.status(404).render('404', { title: 'error' });
 })
