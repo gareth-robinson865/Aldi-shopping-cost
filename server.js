@@ -59,14 +59,14 @@ app.get('/create', (req, res) => {
 
 app.post('/food', (req, res) => {
     console.log(req.body)
-    //const food = new Food(req.body)
-    //food.save()
-        //.then((result) => {
-        //    res.redirect('/')
-        //})
-        //.catch((err) => {
-        //    console.log(err)
-        //})
+    const food = new Food(req.body)
+    food.save()
+        .then((result) => {
+            res.redirect('/')
+        })
+        .catch((err) => {
+            console.log(err)
+        })
 })
 
 app.use((req, res) => {
