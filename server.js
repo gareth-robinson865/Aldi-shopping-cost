@@ -36,6 +36,10 @@ app.use((req, res, next) => {
 
 //Routes
 app.get('/', (req, res) => {
+    res.redirect('/food');
+})
+
+app.get('/food', (req, res) => {
     Food.find().sort({ createdAt: -1 })
         .then((result) => {
             res.render('index', { title: 'home', foods: result })
@@ -53,15 +57,16 @@ app.get('/create', (req, res) => {
     res.render('create', { title: 'create food' })
 })
 
-app.post('/', (req, res) => {
-    const food = new Food(req.body)
-    food.save()
-        .then((result) => {
-            res.redirect('/')
-        })
-        .catch((err) => {
-            console.log(err)
-        })
+app.post('/food', (req, res) => {
+    console.log(req.body)
+    //const food = new Food(req.body)
+    //food.save()
+        //.then((result) => {
+        //    res.redirect('/')
+        //})
+        //.catch((err) => {
+        //    console.log(err)
+        //})
 })
 
 app.use((req, res) => {
