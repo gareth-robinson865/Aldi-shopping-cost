@@ -9,6 +9,10 @@ const foodSchema = new Schema({
     price: {
         type: Number,
         required: true
+    },
+    aisle: {
+        type: Number,
+        required: true
     }
 }, { timestamps: true });
 
