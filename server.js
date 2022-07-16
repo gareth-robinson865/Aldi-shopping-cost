@@ -40,7 +40,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/food', (req, res) => {
-    Food.find().sort({ createdAt: -1 })
+    Food.find().sort({ aisle: -1 })
         .then((result) => {
             res.render('index', { title: 'home', foods: result })
         })
