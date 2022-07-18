@@ -69,6 +69,17 @@ app.post('/food', (req, res) => {
         })
 })
 
+app.delete('/food', (req, res) => {
+    const id = req.params.id;
+    Food.findByIdAndDelete(id)
+        .then(result => {
+            res.json({ redirect: '/food' })
+        })
+        .catch(err => {
+            console.log(err)
+        })
+})
+
 app.use((req, res) => {
     res.status(404).render('404', { title: 'error' });
 })
