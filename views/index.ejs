@@ -10,7 +10,7 @@
         <h2>All food</h2>
         <% if(foods.length > 0) { %>
             <% foods.forEach(food => { %>
-                <a class="single" href="details.ejs/<%= food._id %>">
+                <a class="single" href="details/<%= food._id %>">
                     <h3 class="name"><%= food.name %></h3>
                     <p class="price">£<%= food.price %></p>
                     <p class="aisle"><%= food.aisle %></p>
