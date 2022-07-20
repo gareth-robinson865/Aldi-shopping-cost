@@ -81,7 +81,7 @@ app.get('/details/:id', (req, res) => {
         })
 })
 
-app.delete('/food', (req, res) => {
+app.delete('/food/:id', (req, res) => {
     const id = req.params.id;
     Food.findByIdAndDelete(id)
         .then(result => {
