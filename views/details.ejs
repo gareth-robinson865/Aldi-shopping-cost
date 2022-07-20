@@ -19,7 +19,7 @@
     <script>
         const trashCan = document.querySelector('a.delete');
         trashCan.addEventListener('click', (event) => {
-            const endPoint = `/foods/${trashCan.dataset.doc}`
+            const endPoint = `/food/${trashCan.dataset.doc}`
             fetch(endPoint, {
                 method: 'DELETE'
             })
