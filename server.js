@@ -69,7 +69,7 @@ app.post('/food', (req, res) => {
         })
 })
 
-app.get('/food/:id', (req, res) => {
+app.get('/details/:id', (req, res) => {
     const id = req.params.id;
     console.log(id);
     Food.findById(id)
