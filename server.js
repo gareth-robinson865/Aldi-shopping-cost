@@ -76,7 +76,7 @@ app.get('/details/:id', (req, res) => {
         .then(result => {
             res.render('details', { food: result, title: 'Food details' })
         })
-        .catch(err => {
+        .catch((err) => {
             console.log(err)
         })
 })
