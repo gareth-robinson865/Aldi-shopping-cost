@@ -70,7 +70,15 @@ app.post('/food', (req, res) => {
 })
 
 app.get('/food/:id', (req, res) => {
-    
+    const id = req.params.id;
+    console.log(id);
+    Food.findById(id)
+        .then(result => {
+            res.render('details', { food: result, title: 'Food details' })
+        })
+        .catch(err => {
+            console.log(err)
+        })
 })
 
 app.delete('/food', (req, res) => {
