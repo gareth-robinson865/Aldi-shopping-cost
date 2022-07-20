@@ -69,6 +69,10 @@ app.post('/food', (req, res) => {
         })
 })
 
+app.get('/food/:id', (req, res) => {
+    
+})
+
 app.delete('/food', (req, res) => {
     const id = req.params.id;
     Food.findByIdAndDelete(id)
