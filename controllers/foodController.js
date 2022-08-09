@@ -9,3 +9,15 @@ const food_index = (req, res) => {
             console.log(err)
         })
 }
+
+const food_details = (req, res) => {
+    const id = req.params.id;
+    console.log(id);
+    Food.findById(id)
+        .then(result => {
+            res.render('details', { food: result, title: 'Food details' })
+        })
+        .catch((err) => {
+            console.log(err)
+        })
+}
