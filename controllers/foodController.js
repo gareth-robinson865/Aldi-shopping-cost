@@ -21,3 +21,15 @@ const food_details = (req, res) => {
             console.log(err)
         })
 }
+
+const food_create_post = (req, res) => {
+    console.log(req.body)
+    const food = new Food(req.body)
+    food.save()
+        .then((result) => {
+            res.redirect('/')
+        })
+        .catch((err) => {
+            console.log(err)
+        })
+}
