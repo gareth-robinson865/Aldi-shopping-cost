@@ -39,15 +39,9 @@ app.get('/', (req, res) => {
     res.redirect('/food');
 })
 
-app.get('/food', (req, res) => {
-    Food.find().sort({ aisle: -1 })
-        .then((result) => {
-            res.render('index', { title: 'home', foods: result })
-        })
-        .catch((err) => {
-            console.log(err)
-        })
-})
+/*app.get('/food', (req, res) => {
+    //! moved to the controller
+})*/
 
 app.get('/about', (req, res) => {
     res.render('about', { title: 'about'})
@@ -57,40 +51,17 @@ app.get('/create', (req, res) => {
     res.render('create', { title: 'create food' })
 })
 
-app.post('/food', (req, res) => {
-    console.log(req.body)
-    const food = new Food(req.body)
-    food.save()
-        .then((result) => {
-            res.redirect('/')
-        })
-        .catch((err) => {
-            console.log(err)
-        })
-})
+/*app.post('/food', (req, res) => {
+    //!moved to the controller
+})*/
 
-app.get('/details/:id', (req, res) => {
-    const id = req.params.id;
-    console.log(id);
-    Food.findById(id)
-        .then(result => {
-            res.render('details', { food: result, title: 'Food details' })
-        })
-        .catch((err) => {
-            console.log(err)
-        })
-})
+/*app.get('/details/:id', (req, res) => {
+    //!moved to the controller
+})*/
 
-app.delete('/food/:id', (req, res) => {
-    const id = req.params.id;
-    Food.findByIdAndDelete(id)
-        .then(result => {
-            res.json({ redirect: '/food' })
-        })
-        .catch(err => {
-            console.log(err)
-        })
-})
+/*app.delete('/food/:id', (req, res) => {
+    //!moved to the controller
+})*/
 
 app.use((req, res) => {
     res.status(404).render('404', { title: 'error' });
