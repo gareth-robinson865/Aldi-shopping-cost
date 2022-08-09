@@ -33,3 +33,14 @@ const food_create_post = (req, res) => {
             console.log(err)
         })
 }
+
+const food_delete = (req, res) => {
+    const id = req.params.id;
+    Blog.findByIdAndDelete(id)
+        .then(result => {
+            res.json({ redirect: '/blogs' })
+        })
+        .catch(error => {
+            console.log(error);
+        });
+}
