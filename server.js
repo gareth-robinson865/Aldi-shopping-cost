@@ -40,10 +40,6 @@ app.get('/', (req, res) => {
     res.redirect('/food');
 })
 
-/*app.get('/food', (req, res) => {
-    //! moved to the controller
-})*/
-
 app.get('/about', (req, res) => {
     res.render('about', { title: 'about'})
 })
@@ -51,18 +47,6 @@ app.get('/about', (req, res) => {
 app.get('/create', (req, res) => {
     res.render('create', { title: 'create food' })
 })
-
-/*app.post('/food', (req, res) => {
-    //!moved to the controller
-})*/
-
-/*app.get('/details/:id', (req, res) => {
-    //!moved to the controller
-})*/
-
-/*app.delete('/food/:id', (req, res) => {
-    //!moved to the controller
-})*/
 
 app.use('/food', foodRoutes)
 
