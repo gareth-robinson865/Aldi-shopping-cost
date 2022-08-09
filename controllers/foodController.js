@@ -44,3 +44,10 @@ const food_delete = (req, res) => {
             console.log(error);
         });
 }
+
+module.exports = {
+    food_index,
+    food_details,
+    food_create_post,
+    food_delete
+}
