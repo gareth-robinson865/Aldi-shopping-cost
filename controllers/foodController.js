@@ -10,17 +10,17 @@ const food_index = (req, res) => {
         })
 }
 
-const food_details = (req, res) => {
+/*const food_details = (req, res) => {
     const id = req.params.id;
     console.log(id);
     Food.findById(id)
         .then(result => {
-            res.render('details', { food: result, title: 'Food details' })
+            res.render('details', { food: result, title: 'Food details' });
         })
         .catch((err) => {
             console.log(err)
-        })
-}
+        });//!removed and put into the main server due to issue
+}*/
 
 const food_create_post = (req, res) => {
     console.log(req.body)
@@ -38,7 +38,7 @@ const food_delete = (req, res) => {
     const id = req.params.id;
     Blog.findByIdAndDelete(id)
         .then(result => {
-            res.json({ redirect: '/blogs' })
+            res.json({ redirect: '/food' })
         })
         .catch(error => {
             console.log(error);
@@ -47,7 +47,7 @@ const food_delete = (req, res) => {
 
 module.exports = {
     food_index,
-    food_details,
+    //!food_details, removed due to issue
     food_create_post,
     food_delete
 }
