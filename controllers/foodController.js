@@ -34,20 +34,21 @@ const food_create_post = (req, res) => {
         })
 }
 
-const food_delete = (req, res) => {
+/*const food_delete = (req, res) => {
+    console.log('deletion pending')
     const id = req.params.id;
-    Blog.findByIdAndDelete(id)
+    Food.findByIdAndDelete(id)
         .then(result => {
             res.json({ redirect: '/food' })
         })
         .catch(error => {
             console.log(error);
         });
-}
+}*///! removed and put back into the main server, there is an issue with my routes
 
 module.exports = {
     food_index,
     //!food_details, removed due to issue
     food_create_post,
-    food_delete
+    //!food_delete removed due to issue
 }
