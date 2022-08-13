@@ -50,5 +50,5 @@ module.exports = {
     food_index,
     //!food_details, removed due to issue
     food_create_post,
-    //!food_delete removed due to issue
+    food_delete
 }
