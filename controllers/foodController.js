@@ -34,7 +34,7 @@ const food_create_post = (req, res) => {
         })
 }
 
-/*const food_delete = (req, res) => {
+const food_delete = (req, res) => {
     console.log('deletion pending')
     const id = req.params.id;
     Food.findByIdAndDelete(id)
@@ -44,7 +44,7 @@ const food_create_post = (req, res) => {
         .catch(error => {
             console.log(error);
         });
-}*///! removed and put back into the main server, there is an issue with my routes
+}//testing to be put back into routes file
 
 module.exports = {
     food_index,
