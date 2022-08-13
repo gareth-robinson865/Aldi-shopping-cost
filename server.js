@@ -60,17 +60,7 @@ app.get('/details/:id', (req, res) => {
         });
 })
 
-/*app.delete('/food/:id', (req, res) => {
-    console.log('deletion pending')
-    const id = req.params.id;
-    Food.findByIdAndDelete(id)
-        .then(result => {
-            res.json({ redirect: '/food' })
-        })
-        .catch(error => {
-            console.log(error);
-        });
-})*///!commented out to test being back in the routes file
+
 
 app.use('/food', foodRoutes)
 
