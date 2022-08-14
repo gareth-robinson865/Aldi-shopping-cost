@@ -48,7 +48,7 @@ const food_delete = (req, res) => {
 
 module.exports = {
     food_index,
-    //!food_details, removed due to issue
+    food_details,
     food_create_post,
     food_delete
 }
