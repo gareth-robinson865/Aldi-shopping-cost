@@ -10,7 +10,7 @@ const food_index = (req, res) => {
         })
 }
 
-/*const food_details = (req, res) => {
+const food_details = (req, res) => {
     const id = req.params.id;
     console.log(id);
     Food.findById(id)
@@ -19,8 +19,8 @@ const food_index = (req, res) => {
         })
         .catch((err) => {
             console.log(err)
-        });//!removed and put into the main server due to issue
-}*/
+        });
+}
 
 const food_create_post = (req, res) => {
     console.log(req.body)
