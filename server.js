@@ -48,7 +48,7 @@ app.get('/create', (req, res) => {
     res.render('create', { title: 'create food' })
 })
 
-app.get('/details/:id', (req, res) => {
+/*app.get('/details/:id', (req, res) => {
     const id = req.params.id;
     console.log(id);
     Food.findById(id)
@@ -58,7 +58,7 @@ app.get('/details/:id', (req, res) => {
         .catch((err) => {
             console.log(err)
         });
-})
+})*///!commented to test if could work in route controller file
 
 
 
