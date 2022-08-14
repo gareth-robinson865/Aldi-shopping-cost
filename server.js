@@ -48,19 +48,6 @@ app.get('/create', (req, res) => {
     res.render('create', { title: 'create food' })
 })
 
-/*app.get('/details/:id', (req, res) => {
-    const id = req.params.id;
-    console.log(id);
-    Food.findById(id)
-        .then(result => {
-            res.render('details', { food: result, title: 'Food details' });
-        })
-        .catch((err) => {
-            console.log(err)
-        });
-})*///!commented to test if could work in route controller file
-
-
 
 app.use('/food', foodRoutes)
 
