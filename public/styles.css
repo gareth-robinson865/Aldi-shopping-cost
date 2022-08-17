@@ -36,3 +36,8 @@ nav h1 {
     font-size: 2em;
 }
 
+nav p, nav a {
+    font-weight: 300;
+    color: #777;
+}
+
