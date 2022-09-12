@@ -50,6 +50,16 @@ h3 {
     margin-bottom: 8px;
 }
 
+.content {
+    margin-bottom: 20px;
+}
+
 .content p {
     margin-bottom: 10px;
+}
+
+.delete {
+    background-color: red;
+    padding: 8px;
+    border-radius: 10%;
 }
