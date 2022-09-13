@@ -7,7 +7,9 @@
     <%- include('./partials/nav.ejs') %>
 
     <div class="create-recipe content">
-        <form action="/food" method="POST">
+        <form action="/food" method="POST" class="recipe-creation-form">
+            <label for="recipe-name">Recipe Name</label>
+            <input type="text" id="recipe-name" name="recipe-name" required>
             
         </form>
     </div>
