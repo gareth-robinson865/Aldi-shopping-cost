@@ -48,6 +48,10 @@ app.get('/create', (req, res) => {
     res.render('create', { title: 'create food' })
 })
 
+app.get('/recipe', (req, res) => {
+    res.render('recipe', { title: 'create recipe' })
+})
+
 
 app.use('/food', foodRoutes)
 
