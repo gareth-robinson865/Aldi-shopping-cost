@@ -28,4 +28,6 @@ const recipeSchema = new Schema({
 }, { timestamps: true });
 
 const Food = mongoose.model('food', foodSchema);
+const Recipe = mongoose.model('recipe', recipeSchema);
+module.exports = Recipe;
 module.exports = Food;
