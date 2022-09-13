@@ -16,5 +16,16 @@ const foodSchema = new Schema({
     }
 }, { timestamps: true });
 
+const recipeSchema = new Schema({
+    name: {
+        type: string,
+        required: true
+    },
+    ingredients: {
+        type: [string],
+        required: true
+    }
+}, { timestamps: true });
+
 const Food = mongoose.model('food', foodSchema);
 module.exports = Food;
