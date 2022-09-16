@@ -7,7 +7,7 @@
     <%- include('./partials/nav.ejs') %> <!--nav partial-->
     
     <div class="list-content">
-        <h2>All food</h2>
+        <h2>All foods created</h2>
         <% if(foods.length > 0) { %>
             <% foods.forEach(food => { %>
                 <a class="single" href="food/<%= food._id %>">
