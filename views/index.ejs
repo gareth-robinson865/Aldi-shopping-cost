@@ -23,7 +23,7 @@
         </div>
         <div class="shopping-list">
             <h2 class="list-items">Shopping list</h2>
-            <%if(shopping.length > 0 { %>
+            <% if(shopping.length > 0 { %>
                 <% shopping.forEach(food => { %>
                     <a class="single" href="food/<%= food._id %>">
                         <h3 class="name"><%= food.name %></h3>
@@ -34,7 +34,7 @@
                 <% }) %>
             <% } else { %>
                 <p>Add things to the shopping list</p>    
-            })-->
+            <% }) %>
         </div>
     </div>
     <%- include('./partials/footer.ejs') %> <!--footer partial-->
