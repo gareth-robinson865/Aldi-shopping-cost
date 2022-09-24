@@ -20,6 +20,14 @@
             <% } else { %>
                 <p>There are no foods to display</p>
             <% } %>
+            <!--<%if(shopping.length > 0 { %>
+                <% shopping.forEach(food => { %>
+                    <a class="single" href="food/<%= food._id %>">
+                        <h3 class="name"><%= food.name %></h3>
+                        <p class="price">£<%= food.price %></p>
+                        <p class="aisle">Found on aisle <%= food.aisle %></p> 
+                })
+            })-->
         </div>
         <div class="shopping-list">
             <h2 class="list-items">Shopping list</h2>
