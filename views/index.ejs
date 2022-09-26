@@ -23,19 +23,12 @@
         </div>
         <div class="shopping-area">
             <h2 class="list-items">Shopping list</h2>
+            
             <li class="shopping-list">
 
             </li>
         </div>
     </div>
     <%- include('./partials/footer.ejs') %> <!--footer partial-->
-    <script>
-        function moveToList() {
-            const foodToMove = document.getElementById('add-to-lst');
-            const foodId = foodToMove.dataset.doc;
-            console.log(foodToMove);
-            console.log(foodId);
-        }
-    </script>
 </body>
 </html>
