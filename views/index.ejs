@@ -15,7 +15,7 @@
                         <p class="price">£<%= food.price %></p>
                         <p class="aisle">Item is found on aisle <%= food.aisle %></p>
                     </a>
-                    <button id="add-to-lst" onclick="moveToList()">Add to list</button>
+                    <button id="add-to-lst" data-doc="<%= food.id %>" onclick="moveToList()">Add to list</button>
                 <% }) %>    
             <% } else { %>
                 <p>There are no foods to display</p>
@@ -29,5 +29,13 @@
         </div>
     </div>
     <%- include('./partials/footer.ejs') %> <!--footer partial-->
+    <script>
+        function moveToList() {
+            const foodToMove = document.getElementById('add-to-lst');
+            const foodId = foodToMove.dataset.doc;
+            console.log(foodToMove);
+            console.log(foodId);
+        }
+    </script>
 </body>
 </html>
