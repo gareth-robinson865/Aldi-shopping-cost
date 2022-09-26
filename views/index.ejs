@@ -15,26 +15,17 @@
                         <p class="price">£<%= food.price %></p>
                         <p class="aisle">Item is found on aisle <%= food.aisle %></p>
                     </a>
-                    <button id="add-to-lst">Add to list</button>
+                    <button id="add-to-lst" onclick="moveToList()">Add to list</button>
                 <% }) %>    
             <% } else { %>
                 <p>There are no foods to display</p>
             <% } %>
         </div>
-        <div class="shopping-list">
+        <div class="shopping-area">
             <h2 class="list-items">Shopping list</h2>
-            <% if(shopping.length > 0) { %>
-                <% shopping.forEach(food => { %>
-                    <a class="single" href="food/<%= food._id %>">
-                        <h3 class="name"><%= food.name %></h3>
-                        <p class="price">£<%= food.price %></p>
-                        <p class="aisle">Found on aisle <%= food.aisle %></p>
-                    </a>
-                    <button id="list-delete-btn">    
-                <% }) %>
-            <% } else { %>
-                <p>Add things to the shopping list</p>    
-            <% } %>
+            <li class="shopping-list">
+
+            </li>
         </div>
     </div>
     <%- include('./partials/footer.ejs') %> <!--footer partial-->

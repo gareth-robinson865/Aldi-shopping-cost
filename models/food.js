@@ -16,18 +16,5 @@ const foodSchema = new Schema({
     }
 }, { timestamps: true });
 
-//const recipeSchema = new Schema({
-//    name: {
-//        type: string,
-//        required: true
-//    },
-//    ingredients: {
-//        type: [string],
-//        required: true
-//    }
-//}, { timestamps: true });
-
 const Food = mongoose.model('food', foodSchema);
-//const Recipe = mongoose.model('recipe', recipeSchema);
-//module.exports = Recipe;
 module.exports = Food;
