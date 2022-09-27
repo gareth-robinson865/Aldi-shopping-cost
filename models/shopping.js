@@ -13,3 +13,5 @@ const shoppingSchema = new Schema({
     }
 }, { timestamps: true });
 
+const Shopping  = mongoose.model('food', shoppingSchema);
+module.exports = Shopping;
