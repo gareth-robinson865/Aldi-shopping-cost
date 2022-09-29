@@ -9,3 +9,5 @@ const shopping_create_post = (req, res) => {
             console.log(err)
         })
 }
+
+module.exports = shopping_create_post;
