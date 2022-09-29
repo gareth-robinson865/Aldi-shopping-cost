@@ -1,4 +1,4 @@
-const express = require('exporess');
+const express = require('express');
 const shoppingController = require('../controllers/shoppingController');
 
 const shoppingRouter = express.Router();
