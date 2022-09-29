@@ -51,7 +51,7 @@ app.get('/create', (req, res) => {
 
 app.use('/food', foodRoutes)
 
-
+app.use('/food', shoppingRoutes)
 
 app.use((req, res) => {
     res.status(404).render('404', { title: 'error' });
