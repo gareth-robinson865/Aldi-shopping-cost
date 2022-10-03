@@ -1,7 +1,7 @@
 const Shopping = require('../models/shopping');
 
 const shopping_create_post = (req, res) => {
-    
+    console.log('hello');
     
     
     //console.log(req.body)
