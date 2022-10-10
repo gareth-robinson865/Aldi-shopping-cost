@@ -1,7 +1,7 @@
-const Food = require('../models/food');
+const Shopping = require('../models/shopping');
 
 const food_index = (req, res) => {
-    Food.find().sort({ aisle: -1 })
+    Shopping.find().sort({ aisle: -1 })
         .then((result) => {
             res.render('index', { title: 'home', foods: result })
         })

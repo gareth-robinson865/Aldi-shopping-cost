@@ -7,13 +7,22 @@
     <%- include('./partials/nav.ejs') %> <!--nav partial-->
     <div class="holder">
         <div class="list-content">
-            <h2 class="shopping-title">Shopping List</h2>
+            <h2>Shopping list</h2>
             <% if(shopping.length > 0) { %>
                 <% shopping.forEach(item => { %>
-
-                })    
+                    <form action="/shopping" method="POST">
+                        <a class="single" href="food/<%= food._id %>">
+                            <h3 class="name" name="name" value=<%= food.name %>><%= shopping.name %></h3>
+                            <p class="price" name="price" value=<%= food.price %>>£<%= shopping.price %></p>
+                            <p class="aisle" name="aisle" value=<%= food.aisle %>>Item is found on aisle <%= shopping.aisle %></p>
+                        </a>
+                        <button id="add-to-lst" >Add to list</button>
+                    </form>
+                    <!-- need to use the information that is submitted to take the information
+                    from the food list to create the shopping entry-->
+                <% }) %>    
             <% } else { %>
-                <p>There are no items in your shopping list</p>
+                <p>There are no foods to display</p>
             <% } %>
         </div>
     </div>
