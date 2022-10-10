@@ -7,7 +7,14 @@
     <%- include('./partials/nav.ejs') %> <!--nav partial-->
     <div class="holder">
         <div class="list-content">
-            
+            <h2 class="shopping-title">Shopping List</h2>
+            <% if(shopping.length > 0) { %>
+                <% shopping.forEach(item => { %>
+
+                })    
+            <% } else { %>
+                <p>There are no items in your shopping list</p>
+            <% } %>
         </div>
     </div>
     <%- include('./partials/footer.ejs') %> <!--footer partial-->
