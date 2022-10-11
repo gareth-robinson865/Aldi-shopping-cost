@@ -10,14 +10,12 @@
             <h2>Shopping list</h2>
             <% if(shopping.length > 0) { %>
                 <% shopping.forEach(item => { %>
-                    <form action="/shopping" method="POST">
-                        <a class="single" href="food/<%= food._id %>">
-                            <h3 class="name" name="name"><%= shopping.name %></h3>
-                            <p class="price" name="price">£<%= shopping.price %></p>
-                            <p class="aisle" name="aisle">Item is found on aisle <%= shopping.aisle %></p>
-                        </a>
-                        <button id="add-to-lst" >Add to list</button>
-                    </form>
+                    <a class="single" href="food/<%= food._id %>">
+                        <h3 class="name" name="name"><%= shopping.name %></h3>
+                        <p class="price" name="price">£<%= shopping.price %></p>
+                        <p class="aisle" name="aisle">Item is found on aisle <%= shopping.aisle %></p>
+                    </a>
+                    <button id="add-to-lst" >Add to list</button>
                     <!-- need to use the information that is submitted to take the information
                     from the food list to create the shopping entry-->
                 <% }) %>    
