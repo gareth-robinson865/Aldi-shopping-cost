@@ -38,7 +38,7 @@ app.use((req, res, next) => {
 
 //Routes
 app.get('/', (req, res) => {
-    res.redirect('/food');
+    res.redirect('/shopping');
 })
 
 app.get('/about', (req, res) => {

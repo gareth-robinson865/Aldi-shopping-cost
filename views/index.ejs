@@ -12,9 +12,9 @@
                 <% shopping.forEach(item => { %>
                     <form action="/shopping" method="POST">
                         <a class="single" href="food/<%= food._id %>">
-                            <h3 class="name" name="name" value=<%= food.name %>><%= shopping.name %></h3>
-                            <p class="price" name="price" value=<%= food.price %>>£<%= shopping.price %></p>
-                            <p class="aisle" name="aisle" value=<%= food.aisle %>>Item is found on aisle <%= shopping.aisle %></p>
+                            <h3 class="name" name="name"><%= shopping.name %></h3>
+                            <p class="price" name="price">£<%= shopping.price %></p>
+                            <p class="aisle" name="aisle">Item is found on aisle <%= shopping.aisle %></p>
                         </a>
                         <button id="add-to-lst" >Add to list</button>
                     </form>
