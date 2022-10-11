@@ -39,7 +39,7 @@ const food_delete = (req, res) => {
     const id = req.params.id;
     Food.findByIdAndDelete(id)
         .then(result => {
-            res.json({ redirect: '/food' })
+            res.json({ redirect: '/shopping' })
         })
         .catch(error => {
             console.log(error);
