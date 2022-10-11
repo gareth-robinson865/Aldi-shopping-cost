@@ -1,3 +1,3 @@
-const checkConnected = () => {
-    console.log('hello world');
+const searchFood = () => {
+    
 }
