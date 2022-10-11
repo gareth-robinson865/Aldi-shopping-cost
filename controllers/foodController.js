@@ -1,15 +1,5 @@
 const Shopping = require('../models/shopping');
 
-const food_index = (req, res) => {
-    Shopping.find().sort({ aisle: -1 })
-        .then((result) => {
-            res.render('index', { title: 'home', foods: result })
-        })
-        .catch((err) => {
-            console.log(err)
-        })
-}
-
 const food_details = (req, res) => {
     const id = req.params.id;
     console.log(id);
@@ -47,7 +37,6 @@ const food_delete = (req, res) => {
 }//testing to be put back into routes file
 
 module.exports = {
-    food_index,
     food_details,
     food_create_post,
     food_delete
