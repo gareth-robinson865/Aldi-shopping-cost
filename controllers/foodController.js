@@ -1,4 +1,4 @@
-const Shopping = require('../models/shopping');
+const Food = require('../models/food');
 
 const food_details = (req, res) => {
     const id = req.params.id;
