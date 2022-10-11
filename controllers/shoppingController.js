@@ -3,7 +3,7 @@ const Shopping = require('../models/shopping');
 const shopping_index = (req, res) => {
     Shopping.find().sort({ aisle: -1 })
         .then((result) => {
-            res.render('index', { title: 'home', foods: result })
+            res.render('index', { title: 'home', shopping: result })
         })
         .catch((err) => {
             console.log(err)
