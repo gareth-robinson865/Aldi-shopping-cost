@@ -12,6 +12,10 @@ const food_details = (req, res) => {
         });
 }
 
+const food_find = (req, res) => {
+    
+}
+
 const food_create_post = (req, res) => {
     console.log(req.body)
     const food = new Food(req.body)
