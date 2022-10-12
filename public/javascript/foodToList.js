@@ -5,4 +5,5 @@ const searchFood = () => {
     console.log(searchName);
     //!TODO need to check the searchname value is being taken
     Food.findOne(searchFood)
+    //!TODO need to check that the search is coming through
 }
