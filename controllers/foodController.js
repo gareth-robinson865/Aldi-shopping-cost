@@ -13,7 +13,8 @@ const food_details = (req, res) => {
 }
 
 const food_find = (req, res) => {
-    
+    const name = req.params.id
+    console.log(name);
 }
 
 const food_create_post = (req, res) => {
@@ -42,6 +43,7 @@ const food_delete = (req, res) => {
 
 module.exports = {
     food_details,
+    food_find,
     food_create_post,
     food_delete
 }
