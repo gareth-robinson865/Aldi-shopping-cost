@@ -1,5 +1,5 @@
 const Food = require('../../models/food');
-
+//This may not be required
 const searchFood = () => {
     //getting the value from the search item
     const searchName = document.getElementsByClassName('searchButton').value
