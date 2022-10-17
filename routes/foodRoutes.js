@@ -6,7 +6,7 @@ const router = express.Router();
 //!Food routes
 router.post('/', foodController.food_create_post);
 
-router.get('/', foodController.food_find);
+router.get('/:name', foodController.food_find);
 
 router.get('/:id', foodController.food_details);
 
