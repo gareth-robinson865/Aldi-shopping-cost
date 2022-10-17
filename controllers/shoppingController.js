@@ -8,7 +8,7 @@ const shopping_index = (req, res) => {
         .catch((err) => {
             console.log(err)
         })
-    }
+}
 
 const shopping_create_post = (req, res) => {
     console.log('hello');
