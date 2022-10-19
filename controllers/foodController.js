@@ -13,8 +13,7 @@ const food_details = (req, res) => {
 }
 
 const food_find = (req, res) => {
-    const name = req.params.name
-    console.log(name);
+    console.log(req.body);
 }
 
 const food_create_post = (req, res) => {
