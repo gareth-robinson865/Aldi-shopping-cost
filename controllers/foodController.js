@@ -13,7 +13,8 @@ const food_details = (req, res) => {
 }
 
 const food_find = (req, res) => {
-    console.log(req.body);
+    let name = document.getElementById('search').value
+    console.log(name);
     Food.findOne()
 }
 
