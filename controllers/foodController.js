@@ -14,6 +14,7 @@ const food_details = (req, res) => {
 
 const food_find = (req, res) => {
     console.log(req.body);
+    Food.findOne()
 }
 
 const food_create_post = (req, res) => {
