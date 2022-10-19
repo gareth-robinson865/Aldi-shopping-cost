@@ -13,10 +13,12 @@ const food_details = (req, res) => {
 }
 
 const food_find = (req, res) => {
-    let name = document.getElementById('search').value
-    console.log(name);
-    Food.findOne({ name: name}, function(err, data){
-        console.log(data)
+    Food.findOne({ name: 'baked beans'}, function(err, data){
+        if(err) {
+            console.log(err)
+        } else {
+            console.log('Result : ', data)
+        }
     })
 }
 
