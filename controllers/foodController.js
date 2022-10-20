@@ -11,7 +11,7 @@ const food_details = (req, res) => {
             console.log(err)
         });
 }
-
+//TODO change the function
 const food_find = (req, res) => {
     Food.findOne({ name: 'baked beans'}, function(err, data){
         if(err) {
